@@ -12,8 +12,10 @@ from drf_yasg import openapi
 import joblib
 import ipaddress
 import re
+from rest_framework.permissions import AllowAny
 
 class Predict(APIView):
+    permission_classes = [AllowAny]
     parser_classes = (MultiPartParser, FormParser) 
     # label_encoder = joblib.load(settings.BASE_DIR / 'mlmodel/tensorflow_model/label_encoder.pkl')
 
