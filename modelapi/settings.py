@@ -29,6 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'nidsmodel-dcgjbegraqc9cna0.southafricanorth-01.azurewebsites.net',
+    '127.0.0.1'
 ]
 
 
@@ -82,6 +83,8 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.AllowAny',
     ],
 }
+
+CSRF_TRUSTED_ORIGINS = ['https://nidsmodel-dcgjbegraqc9cna0.southafricanorth-01.azurewebsites.net']
 
 LABELS = ['BENIGN', 'Bot', 'DDoS', 'DoS GoldenEye', 'DoS Hulk','DoS Slowhttptest',
           'DoS slowloris','FTP-Patator','Heartbleed','Infiltration','PortScan','SSH-Patator',
