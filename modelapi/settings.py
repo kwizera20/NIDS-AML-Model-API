@@ -77,7 +77,10 @@ TEMPLATES = [
 WSGI_APPLICATION = 'modelapi.wsgi.application'
 
 REST_FRAMEWORK = {
-    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ],
 }
 
 LABELS = ['BENIGN', 'Bot', 'DDoS', 'DoS GoldenEye', 'DoS Hulk','DoS Slowhttptest',
