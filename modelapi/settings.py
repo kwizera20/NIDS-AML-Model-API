@@ -17,10 +17,6 @@ os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Define the STATIC_URL and STATIC_ROOT
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Example path
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
@@ -87,8 +83,6 @@ REST_FRAMEWORK = {
     ],
 }
 
-CSRF_TRUSTED_ORIGINS = ['https://nidsmodel-dcgjbegraqc9cna0.southafricanorth-01.azurewebsites.net']
-
 LABELS = ['BENIGN', 'Bot', 'DDoS', 'DoS GoldenEye', 'DoS Hulk','DoS Slowhttptest',
           'DoS slowloris','FTP-Patator','Heartbleed','Infiltration','PortScan','SSH-Patator',
           'Web Attack  Brute Force','Web Attack  Sql Injection','Web Attack  XSS'] 
@@ -138,7 +132,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
+# Define the STATIC_URL and STATIC_ROOT
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
