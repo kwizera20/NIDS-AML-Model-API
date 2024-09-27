@@ -14,6 +14,8 @@ import ipaddress
 import re
 
 
+
+
 class Predict(APIView):
     parser_classes = (MultiPartParser, FormParser) 
     # label_encoder = joblib.load(settings.BASE_DIR / 'mlmodel/tensorflow_model/label_encoder.pkl')
